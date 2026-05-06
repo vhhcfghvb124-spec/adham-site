@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adham Platform</title>
+
+<style>
+body{
+  margin:0;
+  background:#020617;
+  color:white;
+  text-align:center;
+  font-family:Arial;
+}
+
+/* نيون */
+.glow{
+  text-shadow:0 0 10px #00f7ff,0 0 20px #00f7ff;
+}
+
+/* زر الدخول */
+.start-btn{
+  margin-top:200px;
+  padding:15px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:12px;
+  background:#00f7ff;
+  color:black;
+  box-shadow:0 0 20px #00f7ff;
+  cursor:pointer;
+}
+
+/* الصفحة */
+#home{display:none;}
+
+/* الصور */
+.triangle{
+  position:relative;
+  width:300px;
+  margin:40px auto;
+}
+.triangle img{
+  width:110px;
+  border-radius:15px;
+  position:absolute;
+}
+.img1{top:0;left:0;}
+.img2{top:0;right:0;}
+.img3{top:120px;left:50%;transform:translateX(-50%);}
+
+.dev{
+  margin-top:160px;
+}
+
+/* الأزرار */
+.btn{
+  display:block;
+  width:85%;
+  margin:10px auto;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#0ea5e9;
+  color:white;
+  box-shadow:0 0 15px #0ea5e9;
+  cursor:pointer;
+}
+.btn:hover{
+  box-shadow:0 0 30px #00f7ff;
+}
+
+/* البوكس */
+.box{
+  display:none;
+  background:#111827;
+  padding:15px;
+  border-radius:12px;
+  width:85%;
+  margin:auto;
+  box-shadow:0 0 20px #00f7ff;
+}
+
+.footer{
+  font-size:12px;
+  text-align:right;
+  margin:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- دخول -->
+<div id="login">
+  <button class="start-btn" onclick="enter()">اضغط لتسجيل الدخول</button>
+</div>
+
+<!-- الصفحة -->
+<div id="home">
+
+<h3 class="glow">بسم الله الرحمن الرحيم<br>يا رب الموقع يكون قد الثقة</h3>
+
+<div class="triangle">
+  <img class="img1" src="https://i.imgur.com/6VBx3io.png">
+  <img class="img2" src="https://i.imgur.com/6VBx3io.png">
+  <img class="img3" src="https://i.imgur.com/6VBx3io.png">
+</div>
+
+<p class="dev">『★』𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 𝘼𝙙𝙝𝙖𝙢『★』</p>
+
+<!-- بوتات واتس -->
+<button class="btn" onclick="show('bots')">🤖 بوتات واتس</button>
+<div class="box" id="bots">
+  <button class="btn" onclick="openLink('https://chat.whatsapp.com/KC8Q6P7Z9RI25uGYHMMMV3')">جروب البوت 1</button>
+  <button class="btn" onclick="openLink('https://chat.whatsapp.com/K5oCXsm3AvuLezbArdHOa2')">جروب البوت 2</button>
+</div>
+
+<!-- كراش -->
+<button class="btn" onclick="show('crash')">💀 بوتات كراش</button>
+<div class="box" id="crash">
+  <button class="btn" onclick="openLink('https://t.me/hfggbjbot')">كراش 1</button>
+  <button class="btn" onclick="openLink('https://t.me/GAZARA_B_BOT')">كراش 2</button>
+  <button class="btn" onclick="openLink('https://t.me/A_d_h_a_m3bot')">كراش 3</button>
+</div>
+
+<!-- القنوات -->
+<button class="btn" onclick="show('channels')">📺 القنوات</button>
+<div class="box" id="channels">
+  <button class="btn" onclick="openLink('https://whatsapp.com/channel/0029VbCkwWWEAKWKOCl2Os3E')">قناة واتس 1</button>
+  <button class="btn" onclick="openLink('https://whatsapp.com/channel/0029VbBk7J059PwUGXv60o16')">قناة واتس 2</button>
+  <button class="btn" onclick="openLink('https://t.me/D_l_L_s_k_H_6')">قناة تيليجرام</button>
+</div>
+
+<!-- الأسعار -->
+<button class="btn" onclick="show('prices')">💰 الأسعار</button>
+<div class="box" id="prices">
+  <p>منصة 32 رام: 600 جنيه</p>
+  <p>استضافة بوتات: 200 - 450 جنيه</p>
+  <p>سيرفر محدد: 30 - 70 جنيه</p>
+  <p>سيرفر غير محدد: 80 جنيه</p>
+</div>
+
+<!-- المطور -->
+<button class="btn" onclick="show('devbox')">👨‍💻 المطور</button>
+<div class="box" id="devbox">
+  <button class="btn" onclick="openLink('https://wa.me/201014962157')">شراء سيرفر</button>
+  <button class="btn" onclick="openLink('https://wa.me/201090656418')">استفسار</button>
+  <button class="btn" onclick="openLink('https://t.me/amom12358')">تيليجرام</button>
+  <button class="btn" onclick="openLink('https://wa.me/201551179084')">رقم احتياطي</button>
+</div>
+
+<div class="footer">
+تم الانشاء بواسطة المطور ادهم ❤️<br>
+موقع لتقديم البوتات والسيرفرات بشكل احترافي
+</div>
+
+</div>
+
+<script>
+function enter(){
+  document.getElementById("login").style.display="none";
+  document.getElementById("home").style.display="block";
+}
+
+function show(id){
+  let boxes = document.querySelectorAll('.box');
+  boxes.forEach(b => b.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+
+function openLink(link){
+  window.open(link);
+}
+</script>
+
+</body>
+</html>
